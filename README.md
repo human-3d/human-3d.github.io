@@ -40,7 +40,7 @@ We propose the first multi-human body-part segmentation model, called Human3D ðŸ
 @article{Takmaz22,
   title     = {{3D Segmentation of Humans in Point Clouds with Synthetic Data}},
   author    = {Takmaz, Ay\c{c}a and Schult, Jonas and Kaftan, Irem and Ak\c{c}ay, Mertcan 
-               and Sumner, Robert and Leibe, Bastian and Engelmann, Francis and Tang, Siyu},
+               and Leibe, Bastian and Sumner, Robert and Engelmann, Francis and Tang, Siyu},
   booktitle = {{arXiv:2212.00786}},
   year      = {2022}
 }
