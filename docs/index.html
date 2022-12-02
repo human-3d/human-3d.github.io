@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Human3D">
+  <meta name="keywords" content="Human3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human3D 🧑‍🤝‍🧑</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .rcorners1 {
+      border-radius: 10px;
+      background: #ffffffd0;
+      padding: 5px;
+      font-size: 120%;
+      color: #5c5c5c;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Human3D 🧑‍🤝‍🧑<br />
+              <p class="title is-3 publication-title">3D Segmentation of Humans in Point Clouds with Synthetic Data</p>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://aycatakmaz.github.io/">Ay&#231;a Takmaz</a><sup>*1</sup>,</span>
+              <span class="author-block">
+                <a href="https://jonasschult.github.io/">Jonas Schult</a><sup>*2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Irem Kaftan</a><sup>&#8224;1</sup>,</span>
+              <span class="author-block">
+                <a href="https://cmakcay.github.io/">Mertcan Ak&#231;ay</a><sup>&#8224;1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.vision.rwth-aachen.de/person/1/">Bastian Leibe</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://studios.disneyresearch.com/people/bob-sumner/">Robert Sumner</a><sup>1</sup>,
+              </span>
+              <br />
+              <span class="author-block">
+                <a href="https://francisengelmann.github.io/">Francis Engelmann</a><sup>1,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://inf.ethz.ch/people/person-detail.MjYyNzgw.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html">Siyu
+                  Tang</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>ETH Zürich, Switzerland</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>2</sup>RWTH Aachen University, Germany</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>1</sup>ETH AI Center, Switzerland</span>
+              <span class="author-block" style="margin-right: 1em;"><sup>*,&#8224;</sup>equal contribution</span>
+            </div>
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2212.00786" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark" style="background-color:#5c5c5c">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+            
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark" style="background-color:#5c5c5c">
+                <span class="icon">
+                  <i class="fas fa-database"></i>
+                </span>
+                <span>Dataset</span>
+              </a>
+            </span>
+            
+            <span class="link-block">
+              <a href="https://omnomnom.vision.rwth-aachen.de/data/human3d/visualizations/egobody/"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fa fa-images"></i>
+                </span>
+                <span>EgoBody Visualizations</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="assets/teaser.jpg" style="max-width:100%" />
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                TL;DR: We propose the first multi-human body-part segmentation model, called Human3D 🧑‍🤝‍🧑, that
+                directly operates on 3D scenes.
+                In an extensive analysis, we validate the benefits of training on synthetic data on multiple baselines
+                and tasks.
+              </b>
+              <br /><br />
+              Segmenting humans in 3D indoor scenes has become increasingly important with the rise of human-centered
+              robotics and AR/VR applications.
+              In this direction, we explore the tasks of 3D human semantic-, instance- and multi-human body-part
+              segmentation.
+              Few works have attempted to directly segment humans in point clouds (or depth maps), which is largely due
+              to the lack of training data on humans interacting with 3D scenes.
+              We address this challenge and propose a framework for synthesizing virtual humans in realistic 3D scenes.
+              Synthetic point cloud data is attractive since the domain gap between real and synthetic depth is small
+              compared to images.
+              Our analysis of different training schemes using a combination of synthetic and realistic data shows that
+              synthetic data for pre-training improves performance in a wide variety of segmentation tasks and models.
+              We further propose the first end-to-end model for 3D multi-human body-part segmentation, called Human3D,
+              that performs all the above segmentation tasks in a unified manner.
+              Remarkably, Human3D even outperforms previous task-specific state-of-the-art methods.
+              Finally, we manually annotate humans in test scenes from EgoBody to compare the proposed training schemes
+              and segmentation models.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Explanatory Video</h2>
+          <video controls poster="assets/explanatory_video_poster.jpg">
+            <source src="https://omnomnom.vision.rwth-aachen.de/data/human3d/Human3D-video-with-captions.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h2 class="title is-4">Point Cloud from iPhone LiDAR</h2>
+          <video autoplay muted loop>
+            <source src="assets/poster_session.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+            <p>
+              Remarkably, our approach generalizes to out-of-distribution examples. Although trained on synthetic data
+              and real Kinect depth data, Human3D shows promising results on reconstructed point clouds scanned with an
+              iPhone LiDAR sensor.
+            </p>
+          </div>
+          <h2 class="title is-4">Depth from Kinect Sensor</h2>
+          <video autoplay muted loop>
+            <source src="assets/kinect_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+            <p>
+              Human3D shows smooth and robust predictions on videos recorded with the Kinect Depth Sensor.
+            </p>
+          </div>
+          <h2 class="title is-4">Synthetic Pretraining</h2>
+          <figure class="cd-image-container">
+            <img src="assets/without_synthetic_pretraining.jpg" alt="Original Image">
+            <span class="cd-image-label" data-type="original">
+            </span>
+
+            <div class="cd-resize-img" style="border-right: 2px dotted rgb(94, 94, 94);">
+              <!-- the resizable image on top -->
+              <img src="assets/with_synthetic_pretraining.jpg" alt="Modified Image">
+              <span class="cd-image-label" data-type="modified">
+              </span>
+            </div>
+
+            <span class="cd-handle"></span>
+          </figure> <!-- cd-image-container -->
+          <div class="content has-text-justified">
+            <p>
+              <b>Only EgoBody data:</b>
+              We observe that models trained only on EgoBody data do not generalize to scenes with more than 2 humans. Here we can
+              see that the instance masks of two people leak into the third person's mask on the right.
+              The reason for this is that the EgoBody dataset only contains scenes with less than 3 people at the same time. When
+              only trained on EgoBody, Human3D inevitably learns this bias and consequently fails for scenes with more than 2
+              people.
+              <br />
+              <b>Pretrained with synthetic data:</b>
+              In contrast, our synthetic dataset consists of scenes with up to 10 people. Human3D, pre-trained on synthetic data
+              and fine-tuned on real EgoBody data, shows significantly better results for scenes with a larger number of people.
+              <br /> <br />
+              <b>We conclude that pre-training with synthetic data helps to segment humans in 3D point clouds!</b>
+            </p>
+          </div>
+          
+          <h2 class="title is-3">Publication</h2>
+          <div class="content has-text-justified">
+          <a href="https://arxiv.org/abs/2212.00786"><img src="assets/paper_preview.jpg" style="max-width:100%" /></a>
+          </div>
+          <h2 class="title is-3">BibTeX</h2>
+          <pre><code>
+@article{Takmaz22,
+    title     = {{3D Segmentation of Humans in Point Clouds with Synthetic Data}},
+    author    = {Takmaz, Ay\c{c}a and Schult, Jonas and Kaftan, Irem and Ak\c{c}ay, Mertcan 
+                  and Sumner, Robert and Leibe, Bastian and Engelmann, Francis and Tang, Siyu},
+    booktitle = {{arXiv:2212.00786}},
+    year      = {2022}
+  }
+            </code></pre>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+                  We would like to thank Utkarsh Sinha and Keunhong Park.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</html>
