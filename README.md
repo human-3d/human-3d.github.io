@@ -29,7 +29,7 @@ We propose the first multi-human body-part segmentation model, called Human3D ðŸ
 
 [[Project Webpage](https://jonasschult.github.io/Human3D/)]    [[Paper](https://arxiv.org/abs/2212.00786)]
 
-## News
+## News :newspaper:
 
 * **02. December 2022**: Project Page and Paper released.
 
