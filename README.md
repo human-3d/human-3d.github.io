@@ -31,7 +31,7 @@ We propose the first multi-human body-part segmentation model, called Human3D ðŸ
 
 ## News :newspaper:
 
-* **02. December 2022**: Project Page and Paper released.
+* **July 2022**: Human3D is accepted at ICCV 2023!
 
 **Code and trained checkpoints are coming soon...**
 
