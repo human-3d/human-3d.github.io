@@ -43,6 +43,8 @@
             <h1 class="title is-1 publication-title">Human3D 🧑‍🤝‍🧑<br />
               <p class="title is-3 publication-title">3D Segmentation of Humans in Point Clouds with Synthetic Data</p>
             </h1>
+            <h1 class="title is-4" style="color: #5c5c5c;">ICCV 2023</h1>
+
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://aycatakmaz.github.io/">Ay&#231;a Takmaz</a><sup>*1</sup>,</span>
@@ -144,22 +146,15 @@
                 and tasks.
               </b>
               <br /><br />
-              Segmenting humans in 3D indoor scenes has become increasingly important with the rise of human-centered
-              robotics and AR/VR applications.
-              In this direction, we explore the tasks of 3D human semantic-, instance- and multi-human body-part
-              segmentation.
-              Few works have attempted to directly segment humans in point clouds (or depth maps), which is largely due
-              to the lack of training data on humans interacting with 3D scenes.
-              We address this challenge and propose a framework for synthesizing virtual humans in realistic 3D scenes.
-              Synthetic point cloud data is attractive since the domain gap between real and synthetic depth is small
-              compared to images.
-              Our analysis of different training schemes using a combination of synthetic and realistic data shows that
-              synthetic data for pre-training improves performance in a wide variety of segmentation tasks and models.
-              We further propose the first end-to-end model for 3D multi-human body-part segmentation, called Human3D,
-              that performs all the above segmentation tasks in a unified manner.
-              Remarkably, Human3D even outperforms previous task-specific state-of-the-art methods.
-              Finally, we manually annotate humans in test scenes from EgoBody to compare the proposed training schemes
-              and segmentation models.
+
+              Segmenting humans in 3D indoor scenes has become increasingly interesting with the rise of human-centered robotics and AR/VR applications.
+              To this end, we propose the task of joint 3D human semantic segmentation, instance segmentation and multi-human body-part segmentation.
+              Few works have attempted to directly segment humans in cluttered 3D scenes, which is largely due to the lack of annotated training data of humans interacting with 3D scenes. 
+              We address this challenge and propose a framework for generating training data of synthetic humans interacting with real 3D scenes.
+              Furthermore, we propose a novel transformer-based model, Human3D, which is the first end-to-end model for segmenting multiple human instances and their body-parts in a unified manner. 
+              The key advantage of our synthetic data generation framework is its ability to generate diverse and realistic human-scene interactions, with highly accurate ground truth. 
+              Our experiments show that pre-training on synthetic data improves performance on a wide variety of 3D human segmentation tasks.
+              Finally, we demonstrate that Human3D outperforms even task-specific state-of-the-art 3D segmentation methods.
             </p>
           </div>
         </div>
@@ -171,7 +166,7 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Explanatory Video</h2>
           <video controls poster="assets/explanatory_video_poster.jpg">
-            <source src="https://omnomnom.vision.rwth-aachen.de/data/human3d/Human3D-video-with-captions.mp4" type="video/mp4">
+            <source src="assets/Human3D_explanatory_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <h2 class="title is-4">Point Cloud from iPhone LiDAR</h2>
@@ -234,7 +229,7 @@
           </div>
           <h2 class="title is-3">BibTeX</h2>
           <pre><code>
-@article{Takmaz22,
+@article{human3d,
     title     = {{3D Segmentation of Humans in Point Clouds with Synthetic Data}},
     author    = {Takmaz, Ay\c{c}a and Schult, Jonas and Kaftan, Irem and Ak\c{c}ay, Mertcan 
                   and Leibe, Bastian and Sumner, Robert and Engelmann, Francis and Tang, Siyu},
